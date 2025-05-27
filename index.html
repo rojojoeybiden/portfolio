@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ernest Theodore Rojo</title>
+    <style>
+        .hidden { display: none; }
+        .content-section img { max-width: 100%; height: auto; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0px; background-color: #f4f4f4; }
+        header { background-color: #76bec5; color: #1f2b21; padding: 10px 0; text-align: center; }
+        header h1 { margin: 20px; }
+        main { padding: 20px; background-color: #d9d9d9;}
+        section { margin: 20px 0; }
+        section h2 { color: #1f2b21; font-size: 2em; }
+        section p { color: #1f2b21; }
+        section div { margin: 10px 0; }
+        section button { margin-right: 10px; padding: 10px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        section button:hover { background-color: #0056b3; }
+        .content-section {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center text */
+        }
+        .content-section-images {
+            display: flex;
+            gap: 20px; /* Increase space between images */
+            width: 100%; /* Ensure it takes up the full width */
+            flex-wrap: wrap; /* Allow images to wrap to the next line */
+            justify-content: center; /* Center images in the section */
+        }
+        .content-section-images img {
+            width: 250px; /* Make each image take up its grid cell */
+            height: auto; /* Maintain aspect ratio */
+            cursor: pointer; /* Change cursor to pointer for clickable images */
+        }
+        .content-section h3 { color: #007BFF; }
+        .content-section img { margin: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .content-section img:hover { border-color: #007BFF; }
+        section.about-me {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        section.about-me h2 {
+            text-align: center;
+        }
+        section.about-me p {
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            section button { display: block; margin: 10px 0; }
+            .content-section img { width: 100%; }
+        }
+        @media (min-width: 601px) {
+            .content-section img { width: calc(33.333% - 20px); margin: 10px; }
+        }
+        @media (min-width: 900px) {
+            .content-section img { width: calc(25% - 20px); }
+        }
+        @media (min-width: 1200px) {
+            .content-section img { width: calc(20% - 20px); }
+        }
+        #school-work img {
+            height: 200px; /* Set a fixed height for School Work images */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+        .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .fullscreen-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            transform-origin: center;
+            transition: transform 0.2s ease;
+        }
+        .fullscreen-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .fullscreen-overlay .close-btn:hover {
+            background-color: #ccc;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer p {
+            margin: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ernest Theodore Rojo</h1>
+        <p>Welcome to my portfolio!</p>
+    </header>
+
+    <main>
+        <section class="about-me">
+            <div>
+                <h2>About Me</h2>
+                <img src="rojo.jpg" alt="" width="250">
+            </div>
+            <div>
+                <p>I am a highly creative and self-motivated graphic designer with 7 years of hands-on,
+                    <br>self taught experience in visual communication, image manipulation,
+                    <br>and digital content creation. Proficient in Adobe Photoshop, Adobe Illustrator,
+                    <br>and Canva, with a strong portfolio demonstrating expertise in infographics,
+                    <br>image editing, graphic design, publications, and YouTube thumbnail creation.
+                    <br>Eager to apply a keen eye for aesthetics and technical proficiency to contribute
+                    <br>to dynamic design projects.
+                </p>
+            </div>
+        </section>
+
+        <section id="publications" class="content-section">
+            <h2>Publications</h2>
+            <div class="content-section-images">
+                <img src="img/pub/FitnessChallengeDay2_Rojo.png" alt="">
+                <img src="img/pub/HERD_PARTY-secretary_galicia.png" alt="">
+                <img src="img/pub/IgnitingCreativty_Rojo.png" alt="">
+                <img src="img/pub/sheepversary.png" alt="">
+            </div>
+        </section>
+
+        <section id="school-work" class="content-section">
+            <h2>School Work</h2>
+            <div class="content-section-images">
+                <img src="img/work/GE4 - Vigenère Cipher Poster_SMALL.png" alt="">
+                <img src="img/work/Peace Building a Better World Together.png" alt="">
+                <img src="img/work/Rojo - LTS - Infographic1 .png" alt="">
+                <img src="img/work/Rojo - LTS - Infographic2.png" alt="">
+                <img src="img/work/sad_sadness.svg" alt="">
+                <img src="img/work/znnhs-snack_station.png" alt="">
+            </div>
+        </section>
+
+        <section id="youtube-thumbnails" class="content-section">
+            <h2>YouTube Thumbnails</h2>
+            <div class="content-section-images">
+                <img src="img/yt/youtube-thumb0.png" alt="">
+                <img src="img/yt/youtube-thumb1.png" alt="">
+                <img src="img/yt/youtube-thumb2.png" alt="">
+                <img src="img/yt/youtube-thumb3.png" alt="">
+                <img src="img/yt/youtube-thumb4.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <button class="close-btn" onclick="closeFullscreen()">X</button>
+        <img id="fullscreenImage" src="" alt="">
+    </div>
+
+    <script>
+        let scale = 1;
+
+        document.querySelectorAll('.content-section img').forEach(img => {
+            img.addEventListener('click', () => {
+                const overlay = document.getElementById('fullscreenOverlay');
+                const fullscreenImg = document.getElementById('fullscreenImage');
+                fullscreenImg.src = img.src;
+                scale = 1; // Reset zoom scale
+                fullscreenImg.style.transform = `scale(${scale})`;
+                overlay.style.display = 'flex';
+            });
+        });
+
+        function closeFullscreen() {
+            document.getElementById('fullscreenOverlay').style.display = 'none';
+        }
+
+        const fullscreenImg = document.getElementById('fullscreenImage');
+        fullscreenImg.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            scale += event.deltaY * -0.01;
+            scale = Math.min(Math.max(1, scale), 5); // Limit zoom scale between 1 and 5
+            fullscreenImg.style.transform = `scale(${scale})`;
+        });
+
+        let startDistance = 0;
+
+        fullscreenImg.addEventListener('touchstart', (event) => {
+            if (event.touches.length === 2) {
+                startDistance = getTouchDistance(event.touches);
+            }
+        });
+
+        fullscreenImg.addEventListener('touchmove', (event) => {
+            if (event.touches.length === 2) {
+                event.preventDefault();
+                const currentDistance = getTouchDistance(event.touches);
+                scale *= currentDistance / startDistance;
+                scale = Math.min(Math.max(1, scale), 5); // Limit zoom scale between 1 and 5
+                fullscreenImg.style.transform = `scale(${scale})`;
+                startDistance = currentDistance;
+            }
+        });
+
+        function getTouchDistance(touches) {
+            const dx = touches[0].clientX - touches[1].clientX;
+            const dy = touches[0].clientY - touches[1].clientY;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Ernest Theodore Rojo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
